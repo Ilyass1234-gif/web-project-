@@ -1,0 +1,65 @@
+
+### Rapport du Projet : Gestion des Stagiaires et Stages
+
+#### **Description Générale :**
+Ce projet est une application Java en mode console qui permet de gérer des **stagiaires** et des **stages**. Il fournit un menu interactif permettant à l'utilisateur d'effectuer plusieurs opérations, comme l'ajout, la suppression, et l'association des stagiaires aux stages.
+
+#### **Objectifs du Projet :**
+- Faciliter la gestion des informations sur les stagiaires et les stages.
+- Simplifier l'association des stagiaires à des stages.
+- Fournir une interface utilisateur simple via un menu console.
+
+#### **Structure du Code :**
+Le projet est organisé autour de plusieurs classes :
+1. **`Main`** : 
+   - Contient le menu principal et les fonctionnalités de gestion.
+   - Utilise des listes pour stocker les informations des stagiaires et des stages.
+   
+2. **`Personne` (classe abstraite)** :
+   - Représente une personne avec les attributs `nom` et `prenom`.
+   - Fournit une méthode abstraite `afficher()` à implémenter par ses sous-classes.
+
+3. **`Stagiaire`** :
+   - Hérite de la classe `Personne`.
+   - Ajoute un attribut `niveauEtude` pour indiquer le niveau d'étude du stagiaire.
+   - Implémente la méthode `afficher()` pour afficher les détails du stagiaire.
+
+4. **`Stage`** :
+   - Représente un stage avec un titre, une durée et une liste de stagiaires associés.
+   - Permet d'ajouter ou de supprimer des stagiaires associés à ce stage.
+
+5. **`Gestion` (interface)** :
+   - Définit trois méthodes : `ajouter()`, `supprimer()`, et `afficher()` pour structurer la gestion des entités.
+
+#### **Fonctionnalités Principales :**
+1. **Ajout d'un stagiaire** : Permet d'ajouter un stagiaire avec son nom, prénom, et niveau d'étude.
+2. **Suppression d'un stagiaire** : Supprime un stagiaire basé sur son nom.
+3. **Affichage des stagiaires** : Liste tous les stagiaires enregistrés.
+4. **Ajout d'un stage** : Crée un nouveau stage avec un titre et une durée.
+5. **Association stagiaire-stage** : Associe un stagiaire existant à un stage spécifique.
+6. **Affichage des stages** : Liste les stages avec leurs informations et les stagiaires associés.
+7. **Recherche d'un stagiaire** : Trouve et affiche un stagiaire à partir de son nom.
+
+#### **Exemple de Menu Console :**
+```
+1. Ajouter un stagiaire
+2. Supprimer un stagiaire
+3. Afficher tous les stagiaires
+4. Ajouter un stage
+5. Associer un stagiaire à un stage
+6. Afficher tous les stages avec les stagiaires associés
+7. Rechercher un stagiaire
+8. Quitter
+Choisissez une option:
+```
+
+#### **Améliorations Possibles :**
+1. **Persistance des données** :
+   - Ajouter une fonctionnalité pour sauvegarder les données dans un fichier (et les relire au démarrage du programme).
+2. **Interface graphique** :
+   - Créer une interface utilisateur en utilisant `JavaFX` ou `Swing` pour rendre le programme plus convivial.
+3. **Validation des entrées** :
+   - Vérifier que les informations saisies par l'utilisateur sont correctes (par exemple, éviter les noms vides).
+
+#### **Conclusion :**
+Ce projet est un bon exemple d'application simple de gestion avec des concepts de base en programmation orientée objet (héritage, polymorphisme, encapsulation). Il est conçu pour être extensible et constitue une excellente base pour ajouter des fonctionnalités supplémentaires ou créer une interface graphique.
